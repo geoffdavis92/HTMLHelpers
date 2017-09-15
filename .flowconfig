@@ -6,3 +6,10 @@
 [libs]
 
 [options]
+suppress_comment=\\(.\\|\n\\)*\\flow-ignore
+module.name_mapper='^classes\(.*\)$' -> '<PROJECT_ROOT>/source/classes\1'
+module.name_mapper='^functions\(.*\)$' -> '<PROJECT_ROOT>/source/functions\1'
+module.name_mapper='^helpers\(.*\)$' -> '<PROJECT_ROOT>/source/_helpers\1'
+module.name_mapper='^types\(.*\)$' -> '<PROJECT_ROOT>/source/types\1'
+module.name_mapper='^tests\(.*\)$' -> '<PROJECT_ROOT>/source/tests\1'
+module.name_mapper='^utilities\(.*\)$' -> '<PROJECT_ROOT>/source/utilities\1'
