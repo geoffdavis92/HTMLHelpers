@@ -1,0 +1,35 @@
+{
+  "name": "HTMLHelpers",
+  "version": "0.0.0",
+  "description": "ES6 Classes, Functions, Types, and Tests to aid in developing interactions with HTML elements",
+  "main": "index.js",
+  "repository": "https://github.com/geoffdavis92/HTMLHelpers.git",
+  "author": "Geoff Davis <geoffdavis92@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "flow-bin": "^0.54.1",
+    "httpster": "^1.0.3",
+    "jest": "^21.1.0",
+    "prettier": "^1.7.0",
+    "webpack": "^3.5.6",
+    "webpack-dev-server": "^2.8.2"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "flow": "flow",
+    "jest": "jest",
+    "prettier": "./node_modules/.bin/prettier {.,./source/**}/*.{js,json} --write",
+    "serve": "./node_modules/.bin/httpster -p 20179",
+    "test": "printf '\n\n*** FLOW ***\n\n'; flow ; printf '\n\n*** JEST ***\n\n'; jest",
+    "webpack": "NODE_ENV=development ./node_modules/.bin/webpack"
+  },
+  "babel": {},
+  "flow": {},
+  "jest": {},
+  "prettier": {}
+}
