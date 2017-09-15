@@ -4,17 +4,84 @@
 	<meta charset="UTF-8">
 	<title>HTMLHelpers</title>
 	<link rel="stylesheet" href="https://unpkg.com/awsm.css@2.1.0/dist/awsm.css">
+	<style>
+	label[for] {
+		cursor: pointer;
+	}
+	label[for] span:hover + input:not([readonly]), label[for] span:hover + select:not([readonly]), label[for] span:hover + textarea:not([readonly]) {
+		border-color: #333;
+	}
+	label input, label select, label textarea { 
+		display: block;
+		background: #fff !important;
+    background-image: none !important;
+    border: 1px solid #aaa;
+    padding: .33em .33em;
+    font-size: .8em;
+  }
+  input:focus, select:focus, textarea:focus {
+  	border-color: #333;
+  }
+  [readonly] {
+  	background-color: #ddd;
+  	border-style: dashed;
+  }
+	</style>
 </head>
 <body>
+	<header><h1>HTMLHelpers</h1></header>
 	<main>
-		<h1>HTMLHelpers</h1>
-		<p><strong>Links:</strong></p>
-		<ul>
-			<li><a href="#!README">README</a></li>
-			<li><a href="#!LINK">LINK</a></li>
-			<li><a href="#!LINK">LINK</a></li>
-		</ul>
+		<section>
+			<header>
+				<h2>Links</h2>
+			</header>
+			<main>
+				<ul>
+					<li><a href="#!README">README</a></li>
+					<li><a href="#!LINK">LINK</a></li>
+					<li><a href="#!LINK">LINK</a></li>
+				</ul>
+			</main>
+		</section>
+		<section>
+			<header>
+				<h2>Form</h2>
+			</header>
+			<main>
+				<form id="test_form" action="#!">
+					<div class="form_group">
+						<label for="firstname"><span>First</span>
+							<input type="text" name="firstname" id="firstname" required>
+						</label>
+					</div>
+					<div class="form_group">
+						<label for="lastname"><span>Last</span>
+							<input type="text" name="lastname" id="lastname" required>
+						</label>
+					</div>
+					<div class="form_group">
+						<label for="username"><span>Username</span>
+							<input type="text" name="username" id="username" readonly>
+						</label>
+					</div>
+					<div class="form_group">
+						<label for="email"><span>Email</span>
+							<input type="email" name="email" id="email" required>
+						</label>
+					</div>
+					<div class="form_group">
+						<label for="account"><span>Account type</span>
+							<select name="account" id="account">
+								<option value="starter">Starter</option>
+								<option value="standard">Standard</option>
+								<option value="enterprise">Enterprise</option>
+							</select>
+						</label>
+					</div>
+				</form>
+			</main>
+		</section>
 	</main>
-	<script src="/dist/index.js"></script>
+	<footer><script src="/dist/index.js"></script></footer>
 </body>
 </html>
